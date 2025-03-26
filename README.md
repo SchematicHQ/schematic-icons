@@ -58,6 +58,45 @@ The package includes a comprehensive set of icons. Here are some examples:
 
 For a complete list of available icons, check the [IconNames type](src/types.ts).
 
+## API Reference
+
+### Exports
+
+The package exports the following:
+
+```typescript
+// React Component
+export { Icon } from 'schematic-icons';
+
+// Types
+export type { IconProps } from 'schematic-icons';
+export type { IconNames } from 'schematic-icons';
+
+// Utilities
+export { iconsList } from 'schematic-icons';
+```
+
+### Icon Component Props
+
+The `Icon` component accepts the following props:
+
+```typescript
+interface IconProps {
+  /** The name of the icon to display */
+  name: IconNames;
+  /** Additional CSS classes to apply to the icon */
+  className?: string;
+  /** Additional CSS styles to apply to the icon */
+  style?: React.CSSProperties;
+}
+```
+
+### Types
+
+- `IconNames`: A union type of all available icon names
+- `IconProps`: The props interface for the Icon component
+- `iconsList`: An array of all available icon names
+
 ## Development
 
 1. Clone the repository
@@ -65,10 +104,30 @@ For a complete list of available icons, check the [IconNames type](src/types.ts)
    ```bash
    yarn install
    ```
-3. Build the project:
-   ```bash
-   yarn build
-   ```
+
+### Available Commands
+
+The following yarn commands are available:
+
+```bash
+# Build the project (generates icons and compiles TypeScript)
+yarn build
+
+# Clean build artifacts and generated files
+yarn clean
+
+# Generate icon fonts and type definitions
+yarn generate
+
+# Run a complete build (clean, generate, and build)
+yarn build:all
+
+# Run ESLint on TypeScript files
+yarn lint
+
+# Prepare the package for publishing (runs build)
+yarn prepare
+```
 
 ## License
 
