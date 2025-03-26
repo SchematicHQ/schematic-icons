@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+yarn-error.log
+
+# Build output
+dist/
+
+# Generated files
+src/types.ts
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Test coverage
+coverage/ 
