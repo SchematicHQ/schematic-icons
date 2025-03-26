@@ -2,20 +2,49 @@
 
 A React component library for displaying Schematic icons. Built with TypeScript and modern CSS, providing type-safe icon usage.
 
+[![npm version](https://img.shields.io/npm/v/schematic-icons.svg)](https://www.npmjs.com/package/schematic-icons)
+[![License](https://img.shields.io/npm/l/schematic-icons.svg)](https://github.com/SchematicHQ/schematic-icons/blob/main/LICENSE)
+
+## Features
+
+- 🎨 100+ carefully crafted icons
+- 🔒 TypeScript support with type-safe icon names
+- ⚡️ Zero configuration required
+- 🎯 Tree-shakeable
+- 🎭 Customizable through CSS classes and styles
+- 📦 Lightweight with minimal dependencies
+
 ## Installation
 
 ```bash
 yarn add schematic-icons
 ```
 
-## Usage
-
-### React Component
+## Quick Start
 
 ```tsx
 import { Icon } from 'schematic-icons';
 
-// Type-safe icon usage
+function MyComponent() {
+  return (
+    <div>
+      <Icon name="check" />
+      <Icon name="close" className="text-red" />
+      <Icon name="arrow-right" style={{ color: 'blue' }} />
+    </div>
+  );
+}
+```
+
+## Usage
+
+### React Component
+
+The `Icon` component is the main way to use Schematic icons in your React application:
+
+```tsx
+import { Icon } from 'schematic-icons';
+
 function MyComponent() {
   return (
     <div>
@@ -27,11 +56,19 @@ function MyComponent() {
 }
 ```
 
-### CSS Import
+### Props
 
-```tsx
-// Import the CSS in your app's entry point
-import 'schematic-icons/style.css';
+The `Icon` component accepts the following props:
+
+```typescript
+interface IconProps {
+  /** The name of the icon to display */
+  name: IconNames;
+  /** Additional CSS classes to apply to the icon */
+  className?: string;
+  /** Additional CSS styles to apply to the icon */
+  style?: React.CSSProperties;
+}
 ```
 
 ### TypeScript Support
@@ -47,7 +84,7 @@ const iconName: IconNames = 'check'; // Will error if 'check' is not a valid ico
 
 ### Available Icons
 
-The package includes a comprehensive set of icons. Here are some examples:
+The package includes a comprehensive set of 100+ icons. Here are some examples:
 
 - `check` - Checkmark icon
 - `close` - Close/X icon
@@ -56,7 +93,7 @@ The package includes a comprehensive set of icons. Here are some examples:
 - `search` - Search/magnifying glass
 - `menu` - Menu/hamburger icon
 
-For a complete list of available icons, check the [IconNames type](src/types.ts).
+For a complete list of available icons, check the [IconNames type](https://github.com/SchematicHQ/schematic-icons/blob/main/src/types.ts).
 
 ## API Reference
 
@@ -76,21 +113,6 @@ export type { IconNames } from 'schematic-icons';
 export { iconsList } from 'schematic-icons';
 ```
 
-### Icon Component Props
-
-The `Icon` component accepts the following props:
-
-```typescript
-interface IconProps {
-  /** The name of the icon to display */
-  name: IconNames;
-  /** Additional CSS classes to apply to the icon */
-  className?: string;
-  /** Additional CSS styles to apply to the icon */
-  style?: React.CSSProperties;
-}
-```
-
 ### Types
 
 - `IconNames`: A union type of all available icon names
@@ -99,7 +121,12 @@ interface IconProps {
 
 ## Development
 
-1. Clone the repository
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SchematicHQ/schematic-icons.git
+   cd schematic-icons
+   ```
+
 2. Install dependencies:
    ```bash
    yarn install
@@ -128,7 +155,3 @@ yarn lint
 # Prepare the package for publishing (runs build)
 yarn prepare
 ```
-
-## License
-
-MIT 
