@@ -1,6 +1,6 @@
 # Schematic Icons
 
-A TypeScript library for generating icon fonts from SVG files. Built on top of Fantasticon with improved TypeScript support, modern CSS generation, and a framework-agnostic React component.
+A React component library for displaying Schematic icons. Built with TypeScript and modern CSS, providing type-safe icon usage.
 
 ## Installation
 
@@ -9,27 +9,6 @@ yarn add schematic-icons
 ```
 
 ## Usage
-
-### Font Generation
-
-```typescript
-import { generateIconFont } from 'schematic-icons';
-
-await generateIconFont({
-  // Required options
-  name: 'MyIcons',           // Name of the generated font
-  inputDir: './svg',         // Directory containing SVG files
-  outputDir: './dist',       // Output directory for the generated font
-
-  // Optional options with defaults
-  fontTypes: ['ttf'],        // Font types to generate
-  assetTypes: ['css', 'json'], // Asset types to generate
-  prefix: 'icon',            // CSS class prefix
-  tag: 'i',                  // HTML tag to use
-  descent: 0,                // Font descent
-  normalize: true            // Normalize icon sizes
-});
-```
 
 ### React Component
 
@@ -40,32 +19,19 @@ import { Icon } from 'schematic-icons';
 function MyComponent() {
   return (
     <div>
-      <Icon name="menu" /> {/* Will error if 'menu' is not a valid icon */}
+      <Icon name="check" /> {/* Will error if 'check' is not a valid icon */}
       <Icon name="close" className="text-red" />
+      <Icon name="arrow-right" style={{ color: 'blue' }} />
     </div>
   );
 }
 ```
 
-### Generated Files
+### CSS Import
 
-For the above configuration, the following files will be generated:
-- `dist/MyIcons.ttf` - The font file
-- `dist/MyIcons.css` - CSS with classes and font-face declaration
-- `dist/MyIcons.json` - JSON mapping of icon names to codepoints
-- `dist/MyIcons.d.ts` - TypeScript type definitions for icon names
-
-### CSS Usage
-
-```html
-<!-- Include the generated CSS -->
-<link rel="stylesheet" href="dist/MyIcons.css">
-
-<!-- Use icons -->
-<i class="icon-example"></i>
-
-<!-- Use as placeholder -->
-<div class="%icon-example"></div>
+```tsx
+// Import the CSS in your app's entry point
+import 'schematic-icons/style.css';
 ```
 
 ### TypeScript Support
@@ -73,20 +39,24 @@ For the above configuration, the following files will be generated:
 The package provides full TypeScript support with type-safe icon names:
 
 ```typescript
-import { IconName, IconClass } from 'schematic-icons';
+import { IconNames } from 'schematic-icons';
 
 // Type-safe icon names
-const iconName: IconName = 'example'; // Will error if 'example' is not a valid icon
-const className: IconClass = 'icon-example'; // Will error if 'example' is not a valid icon
-
-// Runtime type checking
-import { isValidIconName } from './dist/MyIcons';
-
-if (isValidIconName(someString)) {
-  // someString is now type-narrowed to IconName
-  console.log(`Valid icon: ${someString}`);
-}
+const iconName: IconNames = 'check'; // Will error if 'check' is not a valid icon
 ```
+
+### Available Icons
+
+The package includes a comprehensive set of icons. Here are some examples:
+
+- `check` - Checkmark icon
+- `close` - Close/X icon
+- `arrow-right` - Right arrow
+- `heart` - Heart icon
+- `search` - Search/magnifying glass
+- `menu` - Menu/hamburger icon
+
+For a complete list of available icons, check the [IconNames type](src/types.ts).
 
 ## Development
 
@@ -98,10 +68,6 @@ if (isValidIconName(someString)) {
 3. Build the project:
    ```bash
    yarn build
-   ```
-4. Run tests:
-   ```bash
-   yarn test
    ```
 
 ## License
