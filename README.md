@@ -84,16 +84,40 @@ const iconName: IconNames = 'check'; // Will error if 'check' is not a valid ico
 
 ### Available Icons
 
-The package includes a comprehensive set of 100+ icons. Here are some examples:
+The package includes 100+ icons across various categories:
 
-- `check` - Checkmark icon
-- `close` - Close/X icon
-- `arrow-right` - Right arrow
-- `heart` - Heart icon
-- `search` - Search/magnifying glass
-- `menu` - Menu/hamburger icon
+#### Navigation
+- `arrow-up`, `arrow-down`, `arrow-left`, `arrow-right`
+- `chevron-up`, `chevron-down`, `chevron-left`, `chevron-right`
+- `backspace`, `menu`, `sidebar`
 
-For a complete list of available icons, check the [IconNames type](https://github.com/SchematicHQ/schematic-icons/blob/main/src/types.ts).
+#### Actions
+- `check`, `close`, `search`, `filter`
+- `copy`, `link`, `move`, `pencil`
+- `folder`, `folder-plus`, `folder-minus`
+
+#### UI Elements
+- `dots-horizontal`, `dots-vertical`
+- `plus-minus`, `plus-rounded-outline`
+- `collapse`, `collapse-empty`
+
+#### Payment & Finance
+- `stripe`, `paypal`, `visa`, `mastercard`
+- `amex`, `applepay`, `amazonpay`
+- `wallet`, `credit`, `bank`
+
+#### Technology
+- `github`, `google`, `clerk`
+- `webhook`, `integration`, `api`
+- `code`, `server-search`, `database`
+
+For a complete list of available icons, you can use the `iconsList` export:
+
+```typescript
+import { iconsList } from 'schematic-icons';
+
+console.log(iconsList); // Array of all available icon names
+```
 
 ## API Reference
 
@@ -155,3 +179,11 @@ yarn lint
 # Prepare the package for publishing (runs build)
 yarn prepare
 ```
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## License
+
+MIT © [Schematic](https://github.com/SchematicHQ)
