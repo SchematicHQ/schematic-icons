@@ -26,7 +26,7 @@ Thanks for your interest in contributing! This guide will help you get started.
 
 3. Test your icon:
    ```tsx
-   import { Icon } from 'schematic-icons';
+   import { Icon } from '@schematichq/schematic-icons';
    
    <Icon name="my-icon" />
    ```

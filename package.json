@@ -1,8 +1,32 @@
 {
   "name": "@schematichq/schematic-icons",
   "version": "0.1.0",
-  "description": "React component for Schematic icons",
-  "packageManager": "yarn@1.22.22",
+  "description": "React component library for Schematic's icon system with TypeScript support",
+  "author": "Youssefsh",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SchematicHQ/schematic-icons.git"
+  },
+  "homepage": "https://github.com/SchematicHQ/schematic-icons#readme",
+  "bugs": {
+    "url": "https://github.com/SchematicHQ/schematic-icons/issues"
+  },
+  "keywords": [
+    "react",
+    "icons",
+    "schematic",
+    "typescript",
+    "icon-font",
+    "design-system",
+    "react-component"
+  ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -15,9 +39,6 @@
     },
     "./style.css": "./dist/schematic-icons.css"
   },
-  "files": [
-    "dist"
-  ],
   "sideEffects": [
     "*.css"
   ],
@@ -29,13 +50,6 @@
     "prepare": "yarn run build",
     "generate": "node --no-warnings --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' src/generate.ts"
   },
-  "keywords": [
-    "icon",
-    "react",
-    "schematic"
-  ],
-  "author": "",
-  "license": "MIT",
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },

@@ -2,8 +2,9 @@
 
 A React component library for displaying Schematic icons. Built with TypeScript and modern CSS, providing type-safe icon usage.
 
-[![npm version](https://img.shields.io/npm/v/schematic-icons.svg)](https://www.npmjs.com/package/schematic-icons)
-[![License](https://img.shields.io/npm/l/schematic-icons.svg)](https://github.com/SchematicHQ/schematic-icons/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@schematichq/schematic-icons.svg)](https://www.npmjs.com/package/@schematichq/schematic-icons)
+[![License](https://img.shields.io/npm/l/@schematichq/schematic-icons.svg)](https://github.com/SchematicHQ/schematic-icons/blob/main/LICENSE)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@schematichq/schematic-icons)](https://bundlephobia.com/package/@schematichq/schematic-icons)
 
 ## Features
 
@@ -17,13 +18,13 @@ A React component library for displaying Schematic icons. Built with TypeScript 
 ## Installation
 
 ```bash
-yarn add schematic-icons
+yarn add @schematichq/schematic-icons
 ```
 
 ## Quick Start
 
 ```tsx
-import { Icon } from 'schematic-icons';
+import { Icon } from '@schematichq/schematic-icons';
 
 function MyComponent() {
   return (
@@ -43,7 +44,7 @@ function MyComponent() {
 The `Icon` component is the main way to use Schematic icons in your React application:
 
 ```tsx
-import { Icon } from 'schematic-icons';
+import { Icon } from '@schematichq/schematic-icons';
 
 function MyComponent() {
   return (
@@ -76,7 +77,7 @@ interface IconProps {
 The package provides full TypeScript support with type-safe icon names:
 
 ```typescript
-import { IconNames } from 'schematic-icons';
+import { IconNames } from '@schematichq/schematic-icons';
 
 // Type-safe icon names
 const iconName: IconNames = 'check'; // Will error if 'check' is not a valid icon
@@ -114,7 +115,7 @@ The package includes 100+ icons across various categories:
 For a complete list of available icons, you can use the `iconsList` export:
 
 ```typescript
-import { iconsList } from 'schematic-icons';
+import { iconsList } from '@schematichq/schematic-icons';
 
 console.log(iconsList); // Array of all available icon names
 ```
@@ -127,14 +128,14 @@ The package exports the following:
 
 ```typescript
 // React Component
-export { Icon } from 'schematic-icons';
+export { Icon } from '@schematichq/schematic-icons';
 
 // Types
-export type { IconProps } from 'schematic-icons';
-export type { IconNames } from 'schematic-icons';
+export type { IconProps } from '@schematichq/schematic-icons';
+export type { IconNames } from '@schematichq/schematic-icons';
 
 // Utilities
-export { iconsList } from 'schematic-icons';
+export { iconsList } from '@schematichq/schematic-icons';
 ```
 
 ### Types
