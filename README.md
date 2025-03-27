@@ -182,7 +182,7 @@ yarn prepare
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 ## License & Attribution
 
