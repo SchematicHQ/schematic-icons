@@ -184,6 +184,10 @@ yarn prepare
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-## License
+## License & Attribution
 
 MIT © [Schematic](https://github.com/SchematicHQ)
+
+This package includes icons from The Noun Project under a paid license. Icons may only be used as part of this package.
+
+Missing attribution? [Submit a request](https://github.com/SchematicHQ/schematic-icons/issues/new?template=attribution_request.md).
