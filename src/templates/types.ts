@@ -28,11 +28,5 @@ ${iconMapEntries}
  */
 export type IconClass = \`icon-\${IconNames}\`;
 
-/**
- * Helper type to check if a string is a valid icon name
- */
-export function isValidIconName(name: string): name is IconNames {
-  return name in iconsList;
-}
 `;
 } 
