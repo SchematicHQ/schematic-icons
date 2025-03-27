@@ -1,5 +1,5 @@
 {
-  "name": "schematic-icons",
+  "name": "@schematichq/schematic-icons",
   "version": "0.1.0",
   "description": "React component for Schematic icons",
   "packageManager": "yarn@1.22.22",
@@ -38,9 +38,6 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
-  },
-  "dependencies": {
-    "clsx": "^2.0.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
