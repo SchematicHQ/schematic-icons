@@ -23,10 +23,5 @@ export const iconsList = {
 ${iconMapEntries}
 } as const;
 
-/**
- * Type-safe icon class names with prefix
- */
-export type IconClass = \`icon-\${IconNames}\`;
-
 `;
 } 
