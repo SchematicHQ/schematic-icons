@@ -17,3 +17,12 @@ src/types.ts
 
 # Test coverage
 coverage/ 
+
+# Environment variables
+.env 
+
+# Semantic release
+.next/
+.next-release/
+.next-release-data/
+.next-release-data-v2/
