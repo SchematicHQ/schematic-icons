@@ -42,12 +42,19 @@
   "sideEffects": [
     "*.css"
   ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "scripts": {
     "build": "yarn generate && tsc",
     "build:all": "yarn clean && yarn generate && yarn build",
     "clean": "rimraf dist && rimraf src/types.ts",
     "lint": "eslint . --ext .ts,.tsx",
     "prepare": "yarn run build",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release",
     "generate": "node --no-warnings --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' src/generate.ts"
   },
   "peerDependencies": {
@@ -69,5 +76,12 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.0.0"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "dependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "semantic-release": "^24.2.3"
+  }
 }
