@@ -18,8 +18,8 @@
     "icons",
     "schematic",
     "typescript",
-    "icon-font",
     "design-system",
+    "icon-font",
     "react-component"
   ],
   "files": [
