@@ -5,6 +5,9 @@
   "author": "Youssefsh",
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SchematicHQ/schematic-icons.git"
