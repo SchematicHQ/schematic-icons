@@ -1,6 +1,6 @@
 {
   "name": "@schematichq/schematic-icons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React component library for Schematic's icon system with TypeScript support",
   "author": "Youssefsh",
   "license": "MIT",
