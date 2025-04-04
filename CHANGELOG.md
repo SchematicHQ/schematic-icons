@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/SchematicHQ/schematic-icons/compare/v0.2.1...v0.3.0) (2025-04-04)
+
+
+### Features
+
+* **release:** add github release ([d6a062f](https://github.com/SchematicHQ/schematic-icons/commit/d6a062f3695576a2ad053f0506d8f35cdcd5fe52))
+
 ## [0.2.1](https://github.com/SchematicHQ/schematic-icons/compare/v0.2.0...v0.2.1) (2025-04-04)
 
 
