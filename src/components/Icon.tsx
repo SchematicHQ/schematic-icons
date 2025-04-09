@@ -1,17 +1,8 @@
-import React, { CSSProperties, HTMLAttributes } from "react";
 import { IconNames } from "../types";
 import "../../dist/schematic-icons.css";
 
-/**
- * Props for the Icon component
- */
-interface IconProps extends HTMLAttributes<HTMLElement> {
-  /** The name of the icon to display */
+export interface IconProps extends React.HTMLAttributes<HTMLElement> {
   name: IconNames;
-  /** Additional CSS classes to apply to the icon */
-  className?: string;
-  /** Additional CSS styles to apply to the icon */
-  style?: CSSProperties;
 }
 
 /**
@@ -24,11 +15,15 @@ interface IconProps extends HTMLAttributes<HTMLElement> {
  * <Icon name="close" style={{ color: 'red' }} />
  * ```
  */
-export const Icon = ({ name, className = "", style, ...rest }: IconProps) => {
+export const Icon: React.FunctionComponent<IconProps> = ({
+  name,
+  className = "",
+  style,
+  ...rest
+}) => {
   return (
     <i className={`icon icon-${name} ${className}`} style={style} {...rest} />
   );
 };
 
-export type { IconProps };
 export default Icon;

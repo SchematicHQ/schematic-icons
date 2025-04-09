@@ -7,8 +7,8 @@ assignees: Youssefsh
 ---
 
 ### Work Details
-- **Name/Organization**: 
-- **Website**: 
+- **Name/Organization**:
+- **Website**:
 - **Work Type**: [Icon/Code/Other]
 - **Location in Package**: [If known]
 
@@ -19,4 +19,4 @@ assignees: Youssefsh
 <!-- Any links or additional information to verify the request -->
 
 ---
-By submitting this request, I confirm that I have the right to request attribution for this work. 
+By submitting this request, I confirm that I have the right to request attribution for this work.

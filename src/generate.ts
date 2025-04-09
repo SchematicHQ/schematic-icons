@@ -45,7 +45,7 @@ async function generateIconFont(): Promise<void> {
 
   cssContent = cssContent.replace(
     /url\((.*?)\)/,
-    `url(data:font/truetype;charset=utf-8;base64,${ttfBase64})`
+    `url(data:font/truetype;charset=utf-8;base64,${ttfBase64})`,
   );
 
   await fsExtra.writeFile(cssPath, cssContent, "utf8");
