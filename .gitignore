@@ -16,10 +16,10 @@ src/types.ts
 .DS_Store
 
 # Test coverage
-coverage/ 
+coverage/
 
 # Environment variables
-.env 
+.env
 
 # Semantic release
 .next/

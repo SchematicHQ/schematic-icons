@@ -1,14 +1,16 @@
 /**
  * Generates TypeScript type definitions for the icon set
  */
-export function generateTypeDefinitions(codepoints: Record<string, number>): string {
+export function generateTypeDefinitions(
+  codepoints: Record<string, number>,
+): string {
   const iconNames = Object.keys(codepoints);
-  const unionType = iconNames.map(name => `'${name}'`).join(' | ');
-  
+  const unionType = iconNames.map((name) => `'${name}'`).join(" | ");
+
   const iconMapEntries = Object.entries(codepoints)
     .map(([name, code]) => `    '${name}': ${code}`)
-    .join(',\n');
-  
+    .join(",\n");
+
   return `// This file is auto-generated. Do not edit manually.
 
 /**
@@ -24,4 +26,4 @@ ${iconMapEntries}
 } as const;
 
 `;
-} 
+}
