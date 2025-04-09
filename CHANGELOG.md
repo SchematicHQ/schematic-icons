@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/SchematicHQ/schematic-icons/compare/v0.3.0...v0.3.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* **icon:** update dependencies and types ([#8](https://github.com/SchematicHQ/schematic-icons/issues/8)) ([2a93a51](https://github.com/SchematicHQ/schematic-icons/commit/2a93a51c3310ae3dfcbbd1564f8ae41493de2c54))
+
 # [0.3.0](https://github.com/SchematicHQ/schematic-icons/compare/v0.2.1...v0.3.0) (2025-04-04)
 
 
