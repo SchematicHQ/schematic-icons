@@ -40,7 +40,7 @@
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     },
-    "./style.css": "./dist/schematic-icons.css"
+    "./styles.css": "./dist/schematic-icons.css"
   },
   "sideEffects": [
     "*.css"
