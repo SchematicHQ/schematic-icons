@@ -1,4 +1,3 @@
-export { default as Icon, IconProvider } from "./components/Icon";
-export type { IconProps } from "./components/Icon";
-export type { IconNames } from "./types";
-export { iconsList } from "./types";
+export { Icon, type IconProps } from "./components/Icon";
+export { IconStyles } from "./components/styles"; 
+export { iconsList, type IconNames } from "./types";

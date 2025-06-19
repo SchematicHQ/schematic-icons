@@ -2,7 +2,7 @@
  * Generates TypeScript type definitions for the icon set
  */
 export function generateTypeDefinitions(
-  codepoints: Record<string, number>,
+  codepoints: Record<string, number>
 ): string {
   const iconNames = Object.keys(codepoints);
   const unionType = iconNames.map((name) => `'${name}'`).join(" | ");
@@ -32,21 +32,6 @@ export const FONT_FACE_RULE = \`@font-face {
   font-family: "schematic-icons";
   src: url(data:font/truetype;charset=utf-8;base64,{{assets.ttf}}) format("truetype");
 }\`;
-
-/**
- * Base CSS class for the icon font
- */
-export const BASE_ICON_CLASS = \`.schematic-icon {
-  font-family: schematic-icons !important;
-  font-style: normal;
-  font-weight: normal !important;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}\`;
-
 `;
 }
 
