@@ -1,11 +1,13 @@
+import { join } from "path";
+
 import {
-  generateFonts,
   FontAssetType,
   OtherAssetType,
-  RunnerOptions,
+  generateFonts,
+  type RunnerOptions,
 } from "fantasticon";
 import fsExtra from "fs-extra";
-import { join } from "path";
+
 import { generateTypeDefinitions } from "./templates/types.js";
 
 async function generateIconFont(): Promise<void> {

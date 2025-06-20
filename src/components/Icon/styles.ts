@@ -1,5 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import { FONT_FACE_RULE } from "../types";
+import { createGlobalStyle, styled } from "styled-components";
+
+import { FONT_FACE_RULE, iconsList, type IconNames } from "../../types";
 
 export const IconStyles = createGlobalStyle`
   ${FONT_FACE_RULE};
@@ -16,5 +17,12 @@ export const IconStyles = createGlobalStyle`
     &:before {
       display: inline-block;
     }
+  }
+`;
+
+export const StyledIcon = styled.i<{ $name: IconNames }>`
+  &:before {
+    content: "\\${(props) =>
+      iconsList[props.$name].toString(16).padStart(4, "0")}";
   }
 `;
