@@ -1,11 +1,13 @@
+import { join } from "path";
+
 import {
-  generateFonts,
   FontAssetType,
   OtherAssetType,
-  RunnerOptions,
+  generateFonts,
+  type RunnerOptions,
 } from "fantasticon";
 import fsExtra from "fs-extra";
-import { join } from "path";
+
 import { generateTypeDefinitions } from "./templates/types.js";
 
 async function generateIconFont(): Promise<void> {
@@ -39,6 +41,12 @@ async function generateIconFont(): Promise<void> {
   // Embed TTF as base64 in CSS
   const ttfPath = join(options.outputDir, `${options.name}.ttf`);
   const ttfBase64 = await fsExtra.readFile(ttfPath, { encoding: "base64" });
+
+  // Replace the placeholder in types.ts with the actual base64 data
+  const typesPath = join("src", "types.ts");
+  let typesContent = await fsExtra.readFile(typesPath, "utf8");
+  typesContent = typesContent.replace("{{assets.ttf}}", ttfBase64);
+  await fsExtra.writeFile(typesPath, typesContent, "utf8");
 
   const cssPath = join(options.outputDir, `${options.name}.css`);
   let cssContent = await fsExtra.readFile(cssPath, "utf8");

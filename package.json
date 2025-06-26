@@ -2,20 +2,6 @@
   "name": "@schematichq/schematic-icons",
   "version": "0.3.1",
   "description": "React component library for Schematic's icon system with TypeScript support",
-  "author": "Youssefsh",
-  "license": "MIT",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SchematicHQ/schematic-icons.git"
-  },
-  "homepage": "https://github.com/SchematicHQ/schematic-icons#readme",
-  "bugs": {
-    "url": "https://github.com/SchematicHQ/schematic-icons/issues"
-  },
   "keywords": [
     "react",
     "icons",
@@ -25,69 +11,93 @@
     "icon-font",
     "react-component"
   ],
+  "homepage": "https://github.com/SchematicHQ/schematic-icons#readme",
+  "bugs": {
+    "url": "https://github.com/SchematicHQ/schematic-icons/issues"
+  },
+  "license": "MIT",
+  "author": "Schematic <engineering@schematichq.com>",
   "files": [
     "dist",
     "LICENSE",
     "README.md"
   ],
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     },
-    "./style.css": "./dist/schematic-icons.css"
+    "./styles.css": "./dist/schematic-icons.css"
   },
-  "sideEffects": [
-    "*.css"
-  ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SchematicHQ/schematic-icons.git"
   },
   "scripts": {
     "build": "yarn generate && tsc",
     "build:all": "yarn clean && yarn generate && yarn build",
     "clean": "rimraf dist && rimraf src/types.ts",
-    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --fix",
     "prepare": "yarn run build",
     "commit": "git-cz",
     "semantic-release": "semantic-release",
     "generate": "node --no-warnings --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' src/generate.ts"
   },
-  "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
+    "@eslint/js": "^9.29.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/github": "^11.0.3",
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.3",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.1",
-    "@typescript-eslint/eslint-plugin": "^8.29.1",
-    "@typescript-eslint/parser": "^8.29.1",
+    "@types/node": "^24.0.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.0.0",
+    "eslint": "^9.29.0",
+    "eslint-import-resolver-typescript": "^4.4.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "fantasticon": "^3.0.0",
     "fs-extra": "^11.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "rimraf": "^6.0.1",
-    "semantic-release": "^24.2.3",
+    "semantic-release": "^24.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.1"
   },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

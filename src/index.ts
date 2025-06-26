@@ -1,4 +1,2 @@
-export { default as Icon } from "./components/Icon";
-export type { IconProps } from "./components/Icon";
-export type { IconNames } from "./types";
-export { iconsList } from "./types";
+export * from "./components/Icon";
+export { iconsList, type IconNames } from "./types";
