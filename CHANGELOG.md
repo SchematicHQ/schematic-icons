@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/SchematicHQ/schematic-icons/compare/v0.4.0...v0.5.0) (2025-06-27)
+
+
+### Features
+
+* styled components integration, Added new icons ([#12](https://github.com/SchematicHQ/schematic-icons/issues/12)) ([cc324f3](https://github.com/SchematicHQ/schematic-icons/commit/cc324f30a5875e0a1c5f45b2f8cdca3203dc5cf5))
+
 ## [0.3.1](https://github.com/SchematicHQ/schematic-icons/compare/v0.3.0...v0.3.1) (2025-04-09)
 
 
