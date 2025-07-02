@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/SchematicHQ/schematic-icons/compare/v0.5.0...v0.5.1) (2025-07-02)
+
+
+### Bug Fixes
+
+* **exporting iconstyles correctly:** exporting iconStyles correctly ([#13](https://github.com/SchematicHQ/schematic-icons/issues/13)) ([4e090cd](https://github.com/SchematicHQ/schematic-icons/commit/4e090cd6fd751911d7e30cacd8ee498bc116ea8f))
+
 # [0.5.0](https://github.com/SchematicHQ/schematic-icons/compare/v0.4.0...v0.5.0) (2025-06-27)
 
 
