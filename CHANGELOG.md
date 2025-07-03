@@ -1,3 +1,10 @@
+## [0.5.2](https://github.com/SchematicHQ/schematic-icons/compare/v0.5.1...v0.5.2) (2025-07-03)
+
+
+### Bug Fixes
+
+* forcing minor release bump ([#15](https://github.com/SchematicHQ/schematic-icons/issues/15)) ([80d6d16](https://github.com/SchematicHQ/schematic-icons/commit/80d6d160a8edea0767b2f88847f2675dcba89058))
+
 ## [0.5.1](https://github.com/SchematicHQ/schematic-icons/compare/v0.5.0...v0.5.1) (2025-07-02)
 
 
