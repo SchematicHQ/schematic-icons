@@ -24,16 +24,8 @@ jobs:
     - run: yarn install
     - run: yarn lint
     - run: yarn build:all
-    - name: Release to NPM
+    - name: Release to NPM and GitHub Package Registry
       run: yarn semantic-release
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-        registry-url: 'https://npm.pkg.github.com'
-    - name: Release to GitHub Package Registry
-      run: yarn semantic-release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
