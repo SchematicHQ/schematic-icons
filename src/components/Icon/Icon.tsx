@@ -6,7 +6,6 @@ export interface IconProps extends React.HTMLAttributes<HTMLElement> {
   name: IconNames;
 }
 
-
 export const Icon = ({ name, className = "", ...rest }: IconProps) => {
   return (
     <StyledIcon
