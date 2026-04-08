@@ -47,7 +47,8 @@
     "prepare": "yarn run build",
     "commit": "git-cz",
     "semantic-release": "semantic-release",
-    "generate": "node --no-warnings --loader ts-node/esm ./src/generate.ts"
+    "generate": "node --no-warnings --experimental-strip-types ./src/generate.ts",
+    "preview": "yarn generate && node ./scripts/build-preview.mjs"
   },
   "config": {
     "commitizen": {
