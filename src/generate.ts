@@ -8,7 +8,27 @@ import {
 } from "fantasticon";
 import fsExtra from "fs-extra";
 
-import { generateTypeDefinitions } from "./templates/types.js";
+function generateTypeDefinitions(codepoints: Record<string, number>): string {
+  const iconNames = Object.keys(codepoints);
+  const unionType = iconNames.map((name) => `'${name}'`).join(" | ");
+  const iconMapEntries = Object.entries(codepoints)
+    .map(([name, code]) => `  '${name}': ${code}`)
+    .join(",\n");
+
+  return `// This file is auto-generated. Do not edit manually.
+
+export type IconNames = ${unionType};
+
+export const iconsList = {
+${iconMapEntries}
+} as const;
+
+export const FONT_FACE_RULE = \`@font-face {
+  font-family: "schematic-icons";
+  src: url(data:font/truetype;charset=utf-8;base64,{{assets.ttf}}) format("truetype");
+}\`;
+`;
+}
 
 async function generateIconFont(): Promise<void> {
   const options: RunnerOptions = {
@@ -24,7 +44,6 @@ async function generateIconFont(): Promise<void> {
       /**
        * @see {@link https://github.com/nfroidure/svgicons2svgfont/blob/c65b16f85514974707c2eeaf6f4df71b602b075b/src/index.ts#L135-L141}
        */
-      // @ts-expect-error: default values for missing options are provided by default
       svg: {
         centerHorizontally: true,
         centerVertically: true,

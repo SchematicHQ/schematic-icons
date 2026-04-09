@@ -24,7 +24,14 @@ Thanks for your interest in contributing! This guide will help you get started.
    yarn generate
    ```
 
-3. Test your icon:
+3. Preview all icons locally:
+   ```bash
+   yarn preview
+   open preview.html
+   ```
+   This regenerates the font and writes a standalone `preview.html` at the repo root that renders every icon (new/changed icons are highlighted at the top). `preview.html` is gitignored.
+
+4. Test your icon in-app:
    ```tsx
    import { Icon } from '@schematichq/schematic-icons';
 
