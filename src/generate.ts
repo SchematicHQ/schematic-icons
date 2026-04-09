@@ -44,6 +44,7 @@ async function generateIconFont(): Promise<void> {
       /**
        * @see {@link https://github.com/nfroidure/svgicons2svgfont/blob/c65b16f85514974707c2eeaf6f4df71b602b075b/src/index.ts#L135-L141}
        */
+      // @ts-expect-error: default values for missing options are provided by the library
       svg: {
         centerHorizontally: true,
         centerVertically: true,
