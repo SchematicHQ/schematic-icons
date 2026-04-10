@@ -1,3 +1,10 @@
+## [0.5.4](https://github.com/SchematicHQ/schematic-icons/compare/v0.5.3...v0.5.4) (2026-04-10)
+
+
+### Bug Fixes
+
+* smaller Stripe logo icon ([#19](https://github.com/SchematicHQ/schematic-icons/issues/19)) ([880ad23](https://github.com/SchematicHQ/schematic-icons/commit/880ad23f8c97aedf647e89609d2fb0c32f22759c))
+
 ## [0.5.3](https://github.com/SchematicHQ/schematic-icons/compare/v0.5.2...v0.5.3) (2026-04-09)
 
 
