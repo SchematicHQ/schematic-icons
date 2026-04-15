@@ -1,6 +1,6 @@
 {
   "name": "@schematichq/schematic-icons",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "React component library for Schematic's icon system with TypeScript support",
   "keywords": [
     "react",
@@ -56,7 +56,7 @@
     }
   },
   "dependencies": {
-    "styled-components": "^6.3.11"
+    "styled-components": "6.3.12"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
