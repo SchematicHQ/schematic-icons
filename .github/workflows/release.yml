@@ -11,6 +11,7 @@ permissions:
   issues: write
   pull-requests: write
   packages: write
+  id-token: write
 
 jobs:
   release:
@@ -27,6 +28,4 @@ jobs:
     - name: Release to NPM and GitHub Package Registry
       run: yarn semantic-release
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
