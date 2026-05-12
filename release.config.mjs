@@ -15,7 +15,14 @@ export default {
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     "@semantic-release/npm",
-    "@semantic-release/github",
+    [
+      "@semantic-release/github",
+      {
+        failComment: false,
+        failTitle: false,
+        successComment: false,
+      },
+    ],
     [
       "@semantic-release/git",
       {
