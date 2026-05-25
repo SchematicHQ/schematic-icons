@@ -39,6 +39,7 @@
     "url": "git+https://github.com/SchematicHQ/schematic-icons.git"
   },
   "scripts": {
+    "add-vendor-icon": "node ./scripts/add-vendor-icon.mjs",
     "build": "yarn generate && tsc",
     "build:all": "yarn clean && yarn generate && yarn build",
     "clean": "rimraf dist && rimraf src/types.ts",
@@ -83,6 +84,7 @@
     "fantasticon": "^4.1.0",
     "fs-extra": "^11.3.4",
     "globals": "^17.4.0",
+    "potrace": "^2.1.8",
     "prettier": "^3.8.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
