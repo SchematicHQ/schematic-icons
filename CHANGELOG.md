@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/SchematicHQ/schematic-icons/compare/v0.6.0...v0.7.0) (2026-05-25)
+
+
+### Features
+
+* add workos icon ([#24](https://github.com/SchematicHQ/schematic-icons/issues/24)) ([d5ce111](https://github.com/SchematicHQ/schematic-icons/commit/d5ce1110c6cf37d4bc459234dabdc419c0b33a58))
+
 # [0.6.0](https://github.com/SchematicHQ/schematic-icons/compare/v0.5.5...v0.6.0) (2026-05-12)
 
 
