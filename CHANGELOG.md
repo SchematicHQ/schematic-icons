@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/SchematicHQ/schematic-icons/compare/v0.7.0...v0.8.0) (2026-06-16)
+
+
+### Features
+
+* add auth0 icon ([#27](https://github.com/SchematicHQ/schematic-icons/issues/27)) ([e0446f5](https://github.com/SchematicHQ/schematic-icons/commit/e0446f5f51ec6812d0ccb87b62d6eb9b9c8bbd78))
+
 # [0.7.0](https://github.com/SchematicHQ/schematic-icons/compare/v0.6.0...v0.7.0) (2026-05-25)
 
 
